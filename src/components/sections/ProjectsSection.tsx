@@ -1,11 +1,22 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import projectMl from "@/assets/project-ml.jpg";
 import projectCv from "@/assets/project-cv.jpg";
 import projectData from "@/assets/project-data.jpg";
 import projectDl from "@/assets/project-dl.jpg";
+
+type Category = "Todos" | "Machine Learning" | "Visão Computacional" | "Data Science" | "Prompt Engineering";
+
+const categories: Category[] = [
+  "Todos",
+  "Machine Learning",
+  "Visão Computacional",
+  "Data Science",
+  "Prompt Engineering",
+];
 
 const projects = [
   {
@@ -15,6 +26,7 @@ const projects = [
     tags: ["Python", "TensorFlow", "Keras", "OpenCV"],
     github: "https://github.com",
     featured: true,
+    category: "Visão Computacional" as Category,
   },
   {
     title: "Análise Preditiva de Vendas",
@@ -23,6 +35,7 @@ const projects = [
     tags: ["Python", "Pandas", "scikit-learn", "Matplotlib"],
     github: "https://github.com",
     featured: true,
+    category: "Data Science" as Category,
   },
   {
     title: "Detecção de Objetos em Tempo Real",
@@ -31,6 +44,7 @@ const projects = [
     tags: ["Python", "YOLO", "OpenCV", "NumPy"],
     github: "https://github.com",
     featured: true,
+    category: "Visão Computacional" as Category,
   },
   {
     title: "Modelo de Recomendação",
@@ -39,10 +53,35 @@ const projects = [
     tags: ["Python", "scikit-learn", "Pandas", "Flask"],
     github: "https://github.com",
     featured: false,
+    category: "Machine Learning" as Category,
+  },
+  {
+    title: "Assistente de Análise de Dados",
+    description: "Chatbot inteligente para análise exploratória de dados usando técnicas avançadas de prompting com LLMs.",
+    image: projectMl,
+    tags: ["Python", "LangChain", "OpenAI", "Streamlit"],
+    github: "https://github.com",
+    featured: true,
+    category: "Prompt Engineering" as Category,
+  },
+  {
+    title: "Gerador de Relatórios com IA",
+    description: "Sistema automatizado de geração de relatórios técnicos utilizando engenharia de prompts e RAG.",
+    image: projectData,
+    tags: ["Python", "GPT-4", "ChromaDB", "FastAPI"],
+    github: "https://github.com",
+    featured: false,
+    category: "Prompt Engineering" as Category,
   },
 ];
 
 const ProjectsSection = () => {
+  const [activeCategory, setActiveCategory] = useState<Category>("Todos");
+
+  const filteredProjects = activeCategory === "Todos"
+    ? projects
+    : projects.filter((project) => project.category === activeCategory);
+
   return (
     <section id="projetos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -50,12 +89,27 @@ const ProjectsSection = () => {
           Projetos
         </h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-4 rounded-full" />
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
           Uma seleção dos meus projetos em Machine Learning, Deep Learning e análise de dados
         </p>
 
+        {/* Category Filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={activeCategory === category ? "default" : "outline"}
+              size="sm"
+              onClick={() => setActiveCategory(category)}
+              className="rounded-full"
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
+
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <Card 
               key={index} 
               className={`overflow-hidden border-border bg-card hover:shadow-lg transition-shadow ${
@@ -68,11 +122,16 @@ const ProjectsSection = () => {
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                {project.featured && (
-                  <Badge className="absolute top-3 right-3 bg-primary text-primary-foreground">
-                    Destaque
+                <div className="absolute top-3 right-3 flex gap-2">
+                  {project.featured && (
+                    <Badge className="bg-primary text-primary-foreground">
+                      Destaque
+                    </Badge>
+                  )}
+                  <Badge variant="secondary" className="bg-card/90 backdrop-blur-sm">
+                    {project.category}
                   </Badge>
-                )}
+                </div>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-2">
@@ -100,6 +159,12 @@ const ProjectsSection = () => {
             </Card>
           ))}
         </div>
+
+        {filteredProjects.length === 0 && (
+          <p className="text-center text-muted-foreground py-12">
+            Nenhum projeto encontrado nesta categoria.
+          </p>
+        )}
       </div>
     </section>
   );
