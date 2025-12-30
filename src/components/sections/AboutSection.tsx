@@ -24,8 +24,7 @@ const AboutSection = () => {
               Durante a graduação, desenvolvi uma forte base em programação, algoritmos e 
               estruturas de dados, o que me permitiu fazer uma transição natural para o 
               mundo dos dados. Participei de projetos de Iniciação Científica focados em 
-              Machine Learning e Visão Computacional, onde pude aplicar técnicas avançadas 
-              de análise e modelagem.
+              Machine Learning.
             </p>
 
             <p>

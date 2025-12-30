@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Ana Clara Silva. Todos os direitos reservados.
+            © {currentYear} Gabriela Zerbone Magno Baptista. Todos os direitos reservados.
           </p>
         </div>
       </div>

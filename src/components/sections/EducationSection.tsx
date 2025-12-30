@@ -4,15 +4,13 @@ import { GraduationCap } from "lucide-react";
 const education = [
   {
     degree: "Bacharelado em Ciência da Computação",
-    institution: "Universidade Federal de São Paulo",
-    period: "2019 - 2023",
-    description: "Formação completa com ênfase em algoritmos, estruturas de dados, inteligência artificial e desenvolvimento de software.",
+    institution: "Universidade Estadual de Santa Cruz",
+    period: "2021 - 2025",
   },
   {
-    degree: "Bootcamp de Data Science",
-    institution: "Digital Innovation One",
-    period: "2023",
-    description: "Programa intensivo focado em análise de dados, Machine Learning e Python para ciência de dados.",
+    degree: "Análise e Desenvolvimento de Sistemas",
+    institution: "Estácio",
+    period: "2021 - 2023",
   },
 ];
 
@@ -44,9 +42,6 @@ const EducationSection = () => {
                     </div>
                     <p className="text-muted-foreground font-medium mb-2">
                       {edu.institution}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {edu.description}
                     </p>
                   </div>
                 </div>
