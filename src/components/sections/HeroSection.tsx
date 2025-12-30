@@ -21,7 +21,7 @@ const HeroSection = () => {
           <p className="text-primary font-medium mb-4">Olá, eu sou</p>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-            Ana Clara Silva
+            Gabriela Zerbone Magno Baptista
           </h1>
           
           <h2 className="text-xl md:text-2xl font-medium text-primary mb-6">
