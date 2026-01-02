@@ -14,6 +14,7 @@ const certifications = [
     name: "Bootcamp de Ciência de Dados",
     institution: "Atlântico Avanti",
     year: "2024",
+    competencies: ["Análise Exploratória de Dados", "Limpeza de Dados", "Preparação de dados", "Pipeline", "Desenvolvimento de Modelos Preditivos"],
   },
   {
     name: "Curso de Ciência de Dados",
@@ -25,7 +26,6 @@ const certifications = [
     name: "Formação Python Dados & Web",
     institution: "CEPEDI",
     year: "2022",
-    period: "Emitido em set de 2022. Expira em dez de 2022",
     competencies: ["Bancos de dados relacionais", "Python", "Trabalho em equipe", "SQL", "Django", "Ciência da computação", "Microsoft Windows", "Infraestrutura"],
   },
   {
@@ -59,11 +59,6 @@ const CertificationsSection = () => {
                     <p className="text-sm text-primary font-medium mb-1">
                       {cert.institution} {cert.year && `- ${cert.year}`}
                     </p>
-                    {cert.period && (
-                      <p className="text-xs text-muted-foreground mb-2">
-                        {cert.period}
-                      </p>
-                    )}
                     {cert.description && (
                       <p className="text-sm text-muted-foreground mt-2 mb-3">
                         {cert.description}
