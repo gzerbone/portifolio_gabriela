@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Deployment guides and personal notes
+DEPLOY.md
+PERSONALIZE.md
+DEPLOY
