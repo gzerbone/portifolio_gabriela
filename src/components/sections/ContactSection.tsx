@@ -19,21 +19,21 @@ const ContactSection = () => {
             <CardContent className="p-8">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button asChild size="lg" className="gap-2 w-full sm:w-auto">
-                  <a href="mailto:contato@email.com">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gzerbonemb@gmail.com" target="_blank" rel="noopener noreferrer">
                     <Mail className="h-5 w-5" />
                     Email
                   </a>
                 </Button>
                 
                 <Button asChild variant="outline" size="lg" className="gap-2 w-full sm:w-auto">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/gabrielazerbone/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-5 w-5" />
                     LinkedIn
                   </a>
                 </Button>
                 
                 <Button asChild variant="outline" size="lg" className="gap-2 w-full sm:w-auto">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/gzerbone" target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5" />
                     GitHub
                   </a>

@@ -7,7 +7,6 @@ const navItems = [
   { label: "Home", href: "#home" },
   { label: "Sobre Mim", href: "#sobre" },
   { label: "Projetos", href: "#projetos" },
-  { label: "Experiência", href: "#experiencia" },
   { label: "Formação", href: "#formacao" },
   { label: "Pesquisa", href: "#pesquisa" },
   { label: "Habilidades", href: "#habilidades" },
@@ -35,7 +34,7 @@ const Header = () => {
             onClick={(e) => { e.preventDefault(); scrollToSection("#home"); }}
             className="text-xl font-semibold text-primary"
           >
-            Portfolio
+            Portfólio
           </a>
 
           {/* Desktop Navigation */}
@@ -46,7 +45,7 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground/80 hover:text-primary hover:bg-accent"
+                className="text-foreground/80 hover:text-primary hover:bg-accent transition-all duration-200 hover:scale-105"
               >
                 {item.label}
               </Button>

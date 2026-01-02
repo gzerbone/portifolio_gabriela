@@ -3,25 +3,25 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    title: "Desenvolvedora Full Stack",
-    company: "Tech Solutions",
-    period: "2022 - 2023",
-    description: "Desenvolvimento de aplicações web utilizando React, Node.js e Python. Participação ativa em projetos de integração de APIs e otimização de sistemas.",
-    highlights: ["React", "Node.js", "Python", "PostgreSQL"],
+    title: "Desenvolvedora Frontend",
+    company: "TecnoJr",
+    period: "2021 - 2022",
+    description: "Desenvolvimento de aplicações web utilizando React e Node.js. Participação ativa em projetos de integração de APIs e otimização de sistemas.",
+    highlights: ["Node.js", "HTML", "CSS", "JavaScript", "Git", "GitHub", "Figma", "Linux", "VS Code"],
   },
   {
     title: "Estagiária de Desenvolvimento",
-    company: "Startup Innovation",
+    company: "Centro de Inteligência do Cacau",
     period: "2021 - 2022",
     description: "Desenvolvimento de funcionalidades para plataforma SaaS. Implementação de dashboards e relatórios com visualização de dados.",
     highlights: ["Django", "JavaScript", "MySQL", "Git"],
   },
   {
     title: "Bolsista de Iniciação Científica",
-    company: "Universidade Federal",
-    period: "2020 - 2021",
-    description: "Pesquisa em Machine Learning aplicado à Visão Computacional. Desenvolvimento de algoritmos para processamento e classificação de imagens.",
-    highlights: ["Python", "TensorFlow", "OpenCV", "Pesquisa"],
+    company: "CNPq",
+    period: "2023 - 2025",
+    description: "Foi utilizado espectroscopia no infravermelho próximo (NIR) e aprendizado de máquina para identificar neutropenia (baixo nível de glóbulos brancos) em pacientes com câncer. Testei algoritmos como SVM, LDA e Floresta Aleatória, e o modelo SVM obteve os melhores resultados, mostrando o potencial dessa abordagem para uma detecção não invasiva e precisa.",
+    highlights: ["Python", "NumPy", "Pandas", "Scikit-learn", "SVM", "LDA", "Floresta Aleatória"],
   },
 ];
 

@@ -1,73 +1,177 @@
-# Welcome to your Lovable project
+# Portfólio - Gabriela Zerbone
 
-## Project info
+Portfólio profissional de Gabriela Zerbone - Cientista de Dados especializada em Machine Learning, Deep Learning e Visão Computacional.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Tecnologias Utilizadas
 
-## How can I edit this code?
+- **React 18** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Superset JavaScript com tipagem estática
+- **Vite** - Build tool e dev server extremamente rápido
+- **Tailwind CSS** - Framework CSS utility-first
+- **shadcn/ui** - Componentes React reutilizáveis e acessíveis
+- **React Router** - Roteamento para aplicações React
+- **Lucide React** - Biblioteca de ícones
 
-There are several ways of editing your application.
+## 📋 Pré-requisitos
 
-**Use Lovable**
+Antes de começar, você precisa ter instalado:
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🔧 Instalação e Execução Local
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Clone o repositório
+```bash
+git clone <url-do-repositorio>
+cd portifolio_gabriela
+```
 
-**Use your preferred IDE**
+2. Instale as dependências
+```bash
+npm install
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Execute o projeto em modo de desenvolvimento
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto estará disponível em `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Build para Produção
 
-**Use GitHub Codespaces**
+Para criar a versão otimizada para produção:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+Os arquivos otimizados serão gerados na pasta `dist/`
 
-This project is built with:
+Para visualizar a build de produção localmente:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run preview
+```
 
-## How can I deploy this project?
+## 📦 Deploy no Netlify
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Opção 1: Deploy via Interface do Netlify (Recomendado para iniciantes)
 
-## Can I connect a custom domain to my Lovable project?
+1. Faça commit e push do seu código para o GitHub
+```bash
+git add .
+git commit -m "Preparar para deploy"
+git push origin main
+```
 
-Yes, you can!
+2. Acesse [Netlify](https://www.netlify.com/) e faça login (ou crie uma conta gratuita)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. Clique em **"Add new site"** → **"Import an existing project"**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+4. Conecte sua conta do GitHub e selecione o repositório
+
+5. Configure o build:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+   - Clique em **"Deploy site"**
+
+6. Aguarde o deploy finalizar. Seu site estará no ar em poucos minutos!
+
+### Opção 2: Deploy via Netlify CLI
+
+1. Instale o Netlify CLI globalmente
+```bash
+npm install -g netlify-cli
+```
+
+2. Faça login no Netlify
+```bash
+netlify login
+```
+
+3. Inicialize o site
+```bash
+netlify init
+```
+
+4. Deploy manual
+```bash
+npm run build
+netlify deploy --prod
+```
+
+### 🔄 Deploy Contínuo
+
+Após configurar o deploy pelo GitHub, toda vez que você fizer push para a branch `main`, o Netlify automaticamente:
+- Detectará as mudanças
+- Executará o build
+- Fará o deploy da nova versão
+
+## 📁 Estrutura do Projeto
+
+```
+portifolio_gabriela/
+├── public/              # Arquivos estáticos
+├── src/
+│   ├── assets/         # Imagens e recursos
+│   ├── components/     # Componentes React
+│   │   ├── sections/   # Seções da página
+│   │   └── ui/         # Componentes de UI (shadcn)
+│   ├── hooks/          # Custom hooks
+│   ├── lib/            # Utilitários e helpers
+│   ├── pages/          # Páginas da aplicação
+│   ├── App.tsx         # Componente principal
+│   ├── index.css       # Estilos globais
+│   └── main.tsx        # Entry point
+├── index.html          # Template HTML
+├── netlify.toml        # Configuração do Netlify
+├── package.json        # Dependências do projeto
+├── tailwind.config.ts  # Configuração do Tailwind
+├── tsconfig.json       # Configuração do TypeScript
+└── vite.config.ts      # Configuração do Vite
+```
+
+## 🎨 Personalização
+
+### Cores
+
+As cores do tema podem ser personalizadas no arquivo `src/index.css` nas variáveis CSS:
+- `--primary`: Cor principal (roxo)
+- `--background`: Cor de fundo
+- `--foreground`: Cor do texto
+
+### Conteúdo
+
+Os componentes estão organizados em `src/components/sections/`:
+- `HeroSection.tsx` - Seção inicial
+- `AboutSection.tsx` - Sobre mim
+- `ExperienceSection.tsx` - Experiências profissionais
+- `ProjectsSection.tsx` - Projetos realizados
+- `SkillsSection.tsx` - Habilidades técnicas
+- `EducationSection.tsx` - Formação acadêmica
+- `CertificationsSection.tsx` - Certificações
+- `ResearchSection.tsx` - Pesquisas e publicações
+- `ContactSection.tsx` - Contato
+
+## 🔍 Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria a versão de produção
+- `npm run preview` - Visualiza a build de produção localmente
+- `npm run lint` - Executa o linter
+
+## 📝 Licença
+
+Este projeto é de uso pessoal.
+
+## 👤 Autora
+
+**Gabriela Zerbone**
+- Portfolio: [Seu site no Netlify]
+- LinkedIn: [Seu LinkedIn]
+- GitHub: [Seu GitHub]
+
+---
+
+Desenvolvido com ❤️ por Gabriela Zerbone

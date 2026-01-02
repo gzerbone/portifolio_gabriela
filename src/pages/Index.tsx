@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
-import ExperienceSection from "@/components/sections/ExperienceSection";
+// import ExperienceSection from "@/components/sections/ExperienceSection"; // Comentado - será adicionado quando houver experiência profissional
 import EducationSection from "@/components/sections/EducationSection";
 import ResearchSection from "@/components/sections/ResearchSection";
 import SkillsSection from "@/components/sections/SkillsSection";
@@ -18,7 +18,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
-        <ExperienceSection />
+        {/* <ExperienceSection /> */}
         <EducationSection />
         <ResearchSection />
         <SkillsSection />
